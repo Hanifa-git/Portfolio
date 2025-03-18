@@ -1,0 +1,836 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+.banner {
+    background: url('../image/bannerbg.png') no-repeat center center/cover;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 70px;
+}
+
+
+/* 📋 Top Navigation Bar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    z-index: 1000;
+}
+
+.logo img {
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.7));
+}
+
+/* Navigation Menu */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: auto;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: lighter;
+    transition: color 0.3s ease-in-out;
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.7));
+}
+
+.nav-links a:hover {
+    color: #FA34E6;
+}
+
+
+.hero {
+    position: relative;
+    text-align: center;
+    max-width: 900px;
+}
+.planet {
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+h1 {
+    font-size: 6rem;
+    text-shadow: 0 0 20px rgba(255, 0, 255, 0.8);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -260%);
+    z-index: 3;
+    white-space: nowrap;
+}
+.subtitle {
+    font-size: 24px;
+    font-style: italic;
+    position: absolute;
+    bottom: 2%;
+    left: 1%;
+    max-width: 450px;
+    text-align: left;
+    z-index: 3;
+    font-family: 'Sanchez', serif;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    background: linear-gradient(to right, #999999, white, #999999);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #999999; /* Fallback for unsupported browsers */
+}
+
+.subtitle::before {
+    content: "";
+    width: 5px; 
+    height: 140px;
+    background-color:#FA34E6; 
+    display: block;
+}
+
+
+.branding {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    transform: translate(-420%, -970%);
+    font-size: 1.5rem;
+    z-index: 3;
+    color: white; /* Adjust based on background */
+    text-shadow: 0 0 15px #FA34E6; /* Centered glow effect */
+}
+
+.side-text {
+    position: absolute;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    left: 10px;
+    font-size: 10px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+    margin-left: 20px;
+}
+.side-text::before,
+.side-text::after {
+    content: "";
+    width: 1px; 
+    height: 40px; 
+    background-color: #FA34E6; 
+    display: block;
+}
+.little-secret {
+    position: absolute;
+    bottom: 20%;
+    right: 20%;
+    font-size: 16px;
+    text-align: left;
+    max-width: 200px;
+    z-index: 3;
+    font-family: 'Sanchez', serif;
+    display: flex;  /* Ensures the pseudo-element aligns properly */
+    align-items: center;
+    gap: 10px; /* Adds space between text and the vertical line */
+}
+
+.little-secret::before {
+    content: "";
+    width: 5px;   /* Line thickness */
+    height: 140px; /* Line height */
+    background-color: yellowgreen; /* Line color */
+    display: block;
+}
+.subtitle2{
+    background: linear-gradient(to right, #999999, white, #999999);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #999999; /* Fallback for unsupported browsers */
+    font-style: italic; 
+}
+
+
+#earth-container {
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    filter: drop-shadow(-20px 20px 30px rgba(250, 52, 230, 0.5)); 
+}
+
+/* #earth-wrapper::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -10px;
+    left: -20px;
+    background: radial-gradient(circle, rgba(250, 52, 230, 0.2) 10%, rgba(250, 52, 230, 0) 60%);
+    filter: blur(30px);
+    z-index: -1;
+} */
+
+
+
+/* abouts us section starts */
+#about {
+    background: url('/assets/image/aboutbg.png') no-repeat center center/cover;
+    color: white;
+    position: relative;
+    padding: 0px 15px;
+}
+
+/* 💡 Neon Heading */
+.neon-text {
+    font-size: 60px;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 20px rgba(255, 0, 255, 0.8);
+    margin-bottom: 100px;
+}
+.sub-text {
+    font-size: 18px;
+    color: rgba(255, 255, 255,);
+}
+
+/* 📖 About Text */
+.tagline {
+    font-style: italic;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* 🔘 Glowing Buttons */
+.custom-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px;
+    background: linear-gradient(45deg, #FA34E6, #8A2BE2);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(250, 52, 230, 0.7);
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+.custom-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px rgba(250, 52, 230, 1);
+}
+.About-content {
+    font-family: 'Sanchez', serif;
+    font-style: italic;
+    font-size: medium;
+    width: 80%;
+    background: linear-gradient(to right, #999999, white, #999999);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #999999; /* Fallback for unsupported browsers */
+}
+.testing{
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* 🌍 Earth Container in About Section */
+#earth-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+
+
+/* Works section starts */
+#Works {
+    background: url('/assets/image/bannerbg.png') no-repeat center center/cover;
+    height: 100vh;
+    color: white;
+    position: relative;
+    padding: 0px 15px;
+}
+.Works-content {
+    font-family: 'Sanchez', serif;
+    font-style: italic;
+    font-size: medium;
+    background: linear-gradient(to right, #999999, white, #999999);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #999999; /* Fallback for unsupported browsers */
+}
+
+/* Center "View All" link */
+.View-all {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* This ensures perfect centering */
+    bottom: 20px; /* Adjust the distance from the bottom */
+    font-size: 40px;
+    font-weight: lighter;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+   text-shadow: 0 0 20px rgba(255, 0, 255, 0.8);
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    z-index: 3;
+}
+
+
+.View-all:hover {
+    color: #FA34E6; /* Highlight on hover */
+}
+
+
+
+/* Contact section starts */
+#Contact {
+    background: url('/assets/image/bannerbg.png') no-repeat center center/cover;
+    color: white;
+    position: relative;
+    padding: 0px 15px;
+    z-index: 2;
+}
+.Contact-content {
+    font-family: 'Sanchez', serif;
+    font-size: larger;
+    font-style: italic;
+    background: linear-gradient(to right, #999999, white, #999999);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #999999; /* Fallback for unsupported browsers */
+}
+.social-icons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    position: absolute;
+    bottom: 30px;
+    left: 25%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.line {
+    width: 50px;
+    height: 2px;
+    background-color: #999;
+    margin: 0 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 30px;
+}
+
+.social-link {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-link:hover {
+    color: #ffd700;
+}
+
+/* Form Styling */
+form {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: left;
+    color: #ccc;
+}
+
+.form-control {
+    background: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    box-shadow: 0 0 10px #ff00ff;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff;
+}
+
+/* Glowing Button */
+.btn-glow {
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+    background: #ff00ff;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    text-shadow: 0 0 10px white;
+    box-shadow: 0 0 15px #ff00ff;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-glow:hover {
+    background: #d400d4;
+    box-shadow: 0 0 20px #ff00ff;
+}
+.contact-heading{
+    font-family: 'Sanchez', serif;
+    font-style: italic;
+    
+}
+.contact-info{
+    font-family: 'orbitron', serif;
+    font-style: italic;
+    text-shadow: 0 0 20px rgba(255, 0, 255, 0.8);
+}
+.earth {
+    position: fixed; /* or absolute depending on your layout */
+    z-index: 2; /* Default z-index */
+    transition: z-index 0.3s ease-in-out; /* Smooth transition */
+  }
+ 
+ 
+  /* When the contact section is active, reduce Earth's z-index */
+  #Contact:target ~ .earth {
+    z-index: 1;
+  }
+
+  /* Responsive Navigation - Hide Menu on Small Screens */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Menu will be hidden on small screens */
+    }
+}
+
+  /* 🌍 Responsive Design */
+@media screen and (max-width: 1200px) {
+    h1 {
+        font-size: 4rem;
+        top: 45%;
+        transform: translate(-50%, -230%);
+    }
+    .subtitle {
+        font-size: 20px;
+        bottom: 5%;
+        max-width: 400px;
+    }
+    .little-secret {
+        bottom: 25%;
+        right: 10%;
+    }
+    .side-text {
+        left: 5px;
+        font-size: 9px;
+    }
+   
+}
+
+@media screen and (max-width: 992px) {
+    h1 {
+        font-size: 3.5rem;
+        top: 50%;
+        transform: translate(-50%, -200%);
+    }
+    .subtitle {
+        font-size: 18px;
+      
+    }
+    .little-secret {
+        font-size: 14px;
+        bottom: 30%;
+        right: 5%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        font-size: 26px;
+    }
+    h1 {
+        font-size: 2.8rem;
+        top: 45%;
+        transform: translate(-50%, -180%);
+    }
+    .subtitle {
+        font-size: 16px;
+      
+    }
+    .little-secret {
+        font-size: 13px;
+        bottom: 35%;
+        right: 5%;
+    }
+    .side-text {
+        font-size: 8px;
+        left: 2px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    .menu-toggle {
+        font-size: 24px;
+    }
+    h1 {
+        font-size: 2.2rem;
+        top: 40%;
+        transform: translate(-50%, -160%);
+    }
+    .subtitle {
+        font-size: 14px;
+       
+    }
+    .little-secret {
+        font-size: 12px;
+        bottom: 40%;
+        right: 2%;
+    }
+    .side-text {
+        font-size: 7px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 100vh; /* Ensure it takes full screen height */
+    }
+
+    h1 {
+        font-size: 3rem;
+        position: relative; /* Change from absolute */
+        margin-top: -750px; /* Moves it up */
+        text-align: center;
+    }
+    .subtitle {
+        font-size: 13px;
+    }
+    .little-secret {
+        font-size: 11px;
+        bottom: 55%;
+        right: 0%;
+        width: 30%;
+    }
+}
+
+
+/* 🌍 Responsive Design for About Section */
+@media screen and (max-width: 1200px) {
+    #about .neon-text {
+        font-size: 50px;
+    }
+    #about .sub-text {
+        font-size: 16px;
+    }
+    #about .About-content {
+        font-size: 16px;
+    }
+    #about img {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #about .neon-text {
+        font-size: 40px;
+    }
+    #about .sub-text {
+        font-size: 14px;
+    }
+    #about .About-content {
+        font-size: 14px;
+    }
+    #about img {
+        width: 180px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #about .neon-text {
+        font-size: 35px;
+    }
+    #about .sub-text {
+        font-size: 13px;
+    }
+    #about .About-content {
+        font-size: 13px;
+    }
+    #about img {
+        width: 150px;
+    }
+    #about .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #about .neon-text {
+        font-size: 30px;
+    }
+    #about .sub-text {
+        font-size: 12px;
+    }
+    #about .About-content {
+        font-size: 12px;
+    }
+    #about img {
+        width: 120px;
+    }
+    #about .row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    #about .col-md-5 {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #about .neon-text {
+        font-size: 25px;
+    }
+    #about .sub-text {
+        font-size: 11px;
+    }
+    #about .About-content {
+        font-size: 11px;
+    }
+    #about img {
+        width: 140px;
+    }
+}
+
+/* 🌍 Responsive Design for Works Section */
+@media screen and (max-width: 1200px) {
+    #Works .neon-text {
+        font-size: 50px;
+    }
+    #Works .Works-content {
+        font-size: 16px;
+    }
+    #Works img {
+        width: 180px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #Works .neon-text {
+        font-size: 40px;
+    }
+    #Works .Works-content {
+        font-size: 14px;
+    }
+    #Works img {
+        width: 160px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #Works .neon-text {
+        font-size: 35px;
+    }
+    #Works .Works-content {
+        font-size: 13px;
+    }
+    #Works img {
+        width: 140px;
+    }
+    #Works .row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    #Works .col-md-6 {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #Works .neon-text {
+        font-size: 30px;
+    }
+    #Works .Works-content {
+        font-size: 12px;
+    }
+    #Works img {
+        width: 120px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #Works .neon-text {
+        font-size: 25px;
+    }
+    #Works .Works-content {
+        font-size: 11px;
+    }
+    #Works img {
+        width: 100px;
+    }
+}
+
+/* 🌍 Responsive Design for Contact Section */
+@media screen and (max-width: 1200px) {
+    #Contact .neon-text {
+        font-size: 50px;
+    }
+    #Contact .Contact-content {
+        font-size: 16px;
+    }
+    #Contact .form-control {
+        padding: 8px;
+    }
+    #Contact .btn-glow {
+        font-size: 16px;
+        padding: 8px;
+    }
+    #Contact .social-icons-container {
+        bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #Contact .neon-text {
+        font-size: 40px;
+    }
+    #Contact .Contact-content {
+        font-size: 14px;
+    }
+    #Contact .form-control {
+        padding: 7px;
+    }
+    #Contact .btn-glow {
+        font-size: 14px;
+        padding: 7px;
+    }
+    #Contact .social-icons-container {
+        bottom: 15px;
+    }
+    #Contact .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    #Contact .col-md-6 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #Contact .neon-text {
+        font-size: 35px;
+    }
+    #Contact .Contact-content {
+        font-size: 13px;
+    }
+    #Contact .form-control {
+        padding: 6px;
+    }
+    #Contact .btn-glow {
+        font-size: 13px;
+        padding: 6px;
+    }
+    #Contact .social-icons-container {
+        bottom: 10px;
+    }
+    #Contact .social-icons {
+        gap: 20px;
+    }
+    #Contact .line {
+        width: 30px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #Contact .neon-text {
+        font-size: 30px;
+    }
+    #Contact .Contact-content {
+        font-size: 12px;
+    }
+    #Contact .form-control {
+        padding: 5px;
+    }
+    #Contact .btn-glow {
+        font-size: 12px;
+        padding: 5px;
+    }
+    #Contact .social-icons-container {
+        bottom: 5px;
+    }
+    #Contact .social-icons {
+        gap: 15px;
+    }
+    #Contact .line {
+        width: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #Contact .neon-text {
+        font-size: 25px;
+    }
+    #Contact .Contact-content {
+        font-size: 11px;
+    }
+    #Contact .form-control {
+        padding: 4px;
+    }
+    #Contact .btn-glow {
+        font-size: 11px;
+        padding: 4px;
+    }
+    #Contact .social-icons-container {
+        bottom: 0;
+    }
+    #Contact .social-icons {
+        gap: 10px;
+    }
+    #Contact .line {
+        width: 10px;
+    }
+}

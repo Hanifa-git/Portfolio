@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Orbit - Hanifa</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+</head>
+<body>
+    <!-- 🌟 Logo (Top-Left) -->
+    <section class="banner" id="banner">
+        <header class="navbar">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="..png" alt="Design Orbit Logo">
+            </div>
+    
+            <!-- Navigation Menu -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <!-- Tagline Below Navbar -->
+        <div class="side-text">Travel with Hanifa</div>
+    
+        <div class="hero">
+            <div class="branding">Hanifa's</div>
+            <h1>Design Orbit</h1>
+            <!-- 🌍 Three.js Earth will render here -->
+            <div id="earth-container"></div>
+        </div>
+    
+        <p class="subtitle" id="typed-subtitle"></p>
+        <div class="little-secret">
+            <div>
+                <strong>Little Secret</strong><br>
+                <p class="subtitle2" id="typed-text"></p> <!-- Typing effect -->
+            </div>
+        </div>
+    </section>
+    
+ 
+    <section id="about" class="py-5">
+        <div class="">
+            <!-- Title -->
+            <h2 class="neon-text">Phases <span class="sub-text">( About me )</span></h2>
+ 
+            <!-- Content Wrapper -->
+            <div class="row align-items-center mt-4">
+                <!-- Astronaut Image -->
+                <div class="col-md-5 text-start">
+                    <img src="./assets/image/astro.png" alt="Astronaut" class="img-fluid" width="250">
+                </div>
+ 
+                <!-- About Text -->
+                <div class="col-md-7 testing">
+                    <p class="About-content">
+                        I'm Mohammed Abu Hanifa, a UI/UX Designer with 1.6 years of freelance experience and 8 months at TAMU Infotech. I specialize in user-centered design, wireframing, prototyping, and interactive experiences. I help businesses create intuitive and innovative digital products, from UX research to UI design and seamless user experiences.
+                    </p>
+                    <p class="tagline text-center About-content">Let's make something chart-topping together!</p>
+ 
+                    <!-- Buttons -->
+                    <div class="buttons text-center">
+                        <a href="#" class="btn custom-btn">RESUME ⬇</a>
+                        <a href="#" class="btn custom-btn">CONTACT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="Works" class="py-5">
+        <div class="container">
+            <!-- Title -->
+            <h2 class="neon-text text-center">Lunar Creation <span class="sub-text">( Works )</span></h2>
+            
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <h2 style="font-style: italic;">Project Heading</h2>
+                    <p class="Works-content">
+                        When I’m not pixel-perfecting interfaces, you’ll probably find me belting out tunes that are almost as smooth as my user flows.
+                    </p>
+                </div>
+    
+                <div class="col-md-6 d-flex justify-content-end gap-3">
+                    <img src="./assets/image/image.png" alt="Astronaut" class="img-fluid" width="200" height="200">
+                    <img src="./assets/image/image.png" alt="Astronaut" class="img-fluid" width="200" height="200">
+                </div>
+            </div>
+            <p class="View-all">
+                View All
+            </p>
+        </div>
+    </section>
+
+    <section id="Contact" class="py-5">
+        <div class="container">
+            <!-- Title -->
+            <h2 class="neon-text text-center">Reach for the Moon 🌙  
+                <span class="sub-text">( Contact )</span>
+            </h2>
+    
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <p class="Contact-content">
+                        If you have any questions or comments, please contact me via email or phone, 
+                        or send me a message using the contact form.
+                    </p>
+    
+                    <h3 class="contact-heading">Email</h3>
+                    <p class="contact-info">hanifa.uxstudio@gmail.com</p>
+    
+                    <h3 class="contact-heading">Mobile</h3>
+                    <p class="contact-info">8600852058</p>
+                </div>
+    
+                <div class="col-md-6 d-flex justify-content-center gap-3">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>First Name</label>
+                                <input type="text" class="form-control" placeholder="First Name">
+                            </div>
+                            <div class="col-md-6">
+                                <label>Last Name</label>
+                                <input type="text" class="form-control" placeholder="Last Name">
+                            </div>
+                        </div>
+    
+                        <label>Email</label>
+                        <input type="email" class="form-control" placeholder="Your Email">
+    
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Country</label>
+                                <input type="text" class="form-control" placeholder="Country">
+                            </div>
+                            <div class="col-md-8">
+                                <label>Number</label>
+                                <input type="text" class="form-control" placeholder="Phone Number">
+                            </div>
+                        </div>
+    
+                        <label>Subject</label>
+                        <input type="text" class="form-control" placeholder="Subject">
+    
+                        <label>Message</label>
+                        <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+    
+                        <button type="submit" class="btn-glow">Send It to the Stars</button>
+                    </form>
+                </div>
+            </div>
+    
+            <!-- Social Icons Section -->
+            <div class="social-icons-container">
+                <div class="line"></div>
+                <div class="social-icons">
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
+                </div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </section>
+            <script src="/protfolio.js"></script>
+</body>
+</html>
