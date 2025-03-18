@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Earth with Glow</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+    <script>
+        // 🌍 Scene, Camera, and Renderer
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        // 🌎 Load Texture for Earth
+        const textureLoader = new THREE.TextureLoader();
+        const texture = textureLoader.load(
+            'test.png', 
+            () => console.log("✅ Image loaded successfully!"), 
+            undefined, 
+            (err) => console.error("❌ Error loading image!", err)
+        );
+
+        // 🎨 Ensure Texture Wraps Properly
+        texture.wrapS = THREE.RepeatWrapping;
+        texture.wrapT = THREE.RepeatWrapping;
+        texture.minFilter = THREE.LinearFilter;
+
+        // 🌍 Create Earth Sphere
+        const geometry = new THREE.SphereGeometry(2, 64, 64);
+        const material = new THREE.MeshStandardMaterial({ map: texture });
+        const sphere = new THREE.Mesh(geometry, material);
+        scene.add(sphere);
+
+        // ☀️ Main Light Source
+        const mainLight = new THREE.PointLight(0xffffff, 1, 100);
+        mainLight.position.set(5, 5, 5);
+        scene.add(mainLight);
+
+        // 🌟 Soft Purple Glow Light (Bottom-Left)
+        const glowLight = new THREE.PointLight(0xFA34E6, 3, 5);
+        glowLight.position.set(-3, -2, 3); // Bottom-left position
+        glowLight.decay = 2; // Smooth fading effect
+        scene.add(glowLight);
+
+        // 📷 Camera Position
+        camera.position.z = 5;
+
+        // 🔄 Rotation Animation
+        function animate() {
+            requestAnimationFrame(animate);
+            sphere.rotation.y += 0.005; // Smooth Rotation
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // 🖥️ Handle Window Resize
+        window.addEventListener("resize", () => {
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+        });
+    </script>
+</body>
+</html>
