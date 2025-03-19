@@ -86,16 +86,16 @@
     function getSectionConfig(sectionId) {
         const screenWidth = window.innerWidth;
 
-        if (screenWidth < 546) {  // Mobile (Extra Small)
+        if (screenWidth <= 546) {  // Mobile (Extra Small)
             switch (sectionId) {
                 case "banner":
-                    return { scale: 0.8, xPercent: 0, yPercent: 0 };
+                    return { scale: 1.8, xPercent: 0, yPercent: 0 };
                 case "about":
-                    return { scale: 0.3, xPercent: 13, yPercent: 65 };
+                    return { scale: 0.3, xPercent: 17, yPercent: 85 };
                 case "Works":
-                    return { scale: 1.2, xPercent: 0, yPercent: 180 };
+                    return { scale: 2.5, xPercent: 0, yPercent: 250 };
             }
-        } else if (screenWidth < 768) {  // Tablet (Small)
+        } else if (screenWidth <= 768) {  // Tablet (Small)
             switch (sectionId) {
                 case "banner":
                     return { scale: 0.8, xPercent: 0, yPercent: 0 };
@@ -104,14 +104,14 @@
                 case "Works":
                     return { scale: 1.0, xPercent: 0, yPercent: 250 };   
             }
-        } else if (screenWidth < 1024) {  // Small Laptops (Medium)
+        } else if (screenWidth <= 1024) {  // Small Laptops (Medium)
             switch (sectionId) {
                 case "banner":
                     return { scale: 1.1, xPercent: 0, yPercent: 0 };
                 case "about":
-                    return { scale: 0.7, xPercent: -15, yPercent: 100 };
+                    return { scale: 0.5, xPercent: -15, yPercent: 70 };
                 case "Works":
-                    return { scale: 1.3, xPercent: 0, yPercent: 250 };
+                    return { scale: 3.5, xPercent: 0, yPercent: 190 };
                
             }
         } else {  // Desktop (Large)
