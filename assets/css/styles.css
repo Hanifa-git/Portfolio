@@ -38,12 +38,12 @@ html, body {
     list-style: none;
     display: flex;
     gap: 20px;
-    margin: auto;
+    margin: 0;
     padding: 0;
 }
 
 .nav-links li {
-    display: inline;
+    display: 0 20px;
 }
 
 .nav-links a {
@@ -59,6 +59,18 @@ html, body {
     color: #FA34E6;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: #333;
+}
 
 .hero {
     position: relative;
@@ -186,6 +198,32 @@ h1 {
     filter: drop-shadow(-20px 20px 30px rgba(250, 52, 230, 0.5)); 
     overflow: hidden;
 }
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: rgba(255, 255, 255, 0.2); /* Transparent white */
+        backdrop-filter: blur(10px); /* Blur effect for glass look */
+        width: 100%;
+        padding: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+        border-radius: 10px; /* Rounded corners for a smoother look */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
 
 /* ✅ Large Tablets & Small Laptops (Between 1024px - 1200px) */
 @media screen and (max-width: 1200px) {
@@ -425,19 +463,19 @@ label {
     color: #ccc;
 }
 
-.form-control {
+.First-Name,
+.Last-Name,
+.Email,
+.Country,
+.Number,
+.Subject,
+.Message {
     background: white;
     border: 1px solid rgba(255, 255, 255, 0.5);
     color: white;
     box-shadow: 0 0 10px #ff00ff;
     padding: 10px;
     margin-bottom: 10px;
-}
-
-.form-control:focus {
-    background: rgba(255, 255, 255, 0.3);
-    border-color: #ff00ff;
-    box-shadow: 0 0 10px #ff00ff;
 }
 
 /* Glowing Button */
@@ -569,22 +607,50 @@ label {
     }
     h1 {
         font-size: 2.2rem;
-        top: 40%;
+        top: 35%;
         transform: translate(-50%, -160%);
     }
     .subtitle {
-        font-size: 14px;
+        position: absolute;
+        width: 270px;
+        top: 50%;
+        left: 6%;
+        transform: translate(0,0);
+        font-size: 12px;
+        text-align: left;
        
     }
+    .subtitle::before{
+        height: 90px;
+    }
     .little-secret {
-        font-size: 12px;
-        bottom: 40%;
-        right: 2%;
+        position: absolute;
+        transform: translate(0,0);
+        font-size: 6px;
+        top: 29%;
+        left: 63%;
+    }
+    .little-secret::before{
+        height: 95px;
     }
     .side-text {
-        font-size: 7px;
+        font-size: 6px;
+        transform: translate(0,0);
+        left: 88%;
+        top:75%;
     }
 
+    .side-text::before,
+    .side-text::after {
+    height: 30px;
+}
+    .branding{
+        top: 45px;
+        left: 0px;
+        transform: translate(5px, 10px);
+        font-size: 12px;
+    }
+    
 }
 
 @media screen and (max-width: 400px) {
@@ -668,6 +734,7 @@ label {
 @media screen and (max-width: 576px) {
     #about .neon-text {
         font-size: 30px;
+        margin-bottom: 0;
     }
     #about .sub-text {
         font-size: 12px;
@@ -751,12 +818,18 @@ label {
 @media screen and (max-width: 576px) {
     #Works .neon-text {
         font-size: 30px;
+        margin-bottom: 0;
     }
     #Works .Works-content {
         font-size: 12px;
+        margin-top: 20px;
     }
     #Works img {
-        width: 120px;
+        width: 140px;
+        justify-content: center;
+    }
+    .Works-heading{
+        margin-top: 25px;
     }
 }
 
@@ -847,12 +920,13 @@ label {
 @media screen and (max-width: 576px) {
     #Contact .neon-text {
         font-size: 30px;
+        margin-bottom: 0;
     }
     #Contact .Contact-content {
         font-size: 12px;
     }
-    #Contact .form-control {
-        padding: 5px;
+    .First-Name{
+        width: 150px;
     }
     #Contact .btn-glow {
         font-size: 12px;

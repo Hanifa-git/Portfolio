@@ -89,11 +89,11 @@
         if (screenWidth <= 546) {  // Mobile (Extra Small)
             switch (sectionId) {
                 case "banner":
-                    return { scale: 1.8, xPercent: 0, yPercent: 0 };
+                    return { scale: 1.8, xPercent: 0, yPercent: -12 };
                 case "about":
-                    return { scale: 0.3, xPercent: 17, yPercent: 85 };
+                    return { scale: 0.7, xPercent: 25, yPercent: 75 };
                 case "Works":
-                    return { scale: 2.5, xPercent: 0, yPercent: 250 };
+                    return { scale: 3.4, xPercent: 0, yPercent: 250 };
             }
         } else if (screenWidth <= 768) {  // Tablet (Small)
             switch (sectionId) {
@@ -225,8 +225,13 @@
         observer.observe(document.querySelector(".subtitle"));
     });
 
-    // Toggle Side Menu
-    function toggleMenu() {
-        document.getElementById("sideMenu").classList.toggle("active");
-    }
+    // Get elements
+const hamburgerMenu = document.getElementById("hamburger-menu");
+const navLinks = document.getElementById("nav-links");
+
+// Toggle the active class to show/hide the menu
+hamburgerMenu.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
 }

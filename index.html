@@ -22,12 +22,17 @@
         <header class="navbar">
             <!-- Logo -->
             <div class="logo">
-                <img src="..png" alt="Design Orbit Logo">
+                <img src="/png" alt="Logo">
             </div>
     
             <!-- Navigation Menu -->
             <nav>
-                <ul class="nav-links">
+                <div class="hamburger" id="hamburger-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-links" id="nav-links">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Projects</a></li>
@@ -54,6 +59,7 @@
             </div>
         </div>
     </section>
+    
     
  
     <section id="about" class="py-5">
@@ -92,7 +98,7 @@
             
             <div class="row mt-4">
                 <div class="col-md-6">
-                    <h2 style="font-style: italic;">Project Heading</h2>
+                    <h2 class="Works-heading" style="font-style: italic;">Project Heading</h2>
                     <p class="Works-content">
                         When I’m not pixel-perfecting interfaces, you’ll probably find me belting out tunes that are almost as smooth as my user flows.
                     </p>
@@ -131,37 +137,37 @@
                 </div>
     
                 <div class="col-md-6 d-flex justify-content-center gap-3">
-                    <form>
+                    <form class="">
                         <div class="row">
                             <div class="col-md-6">
                                 <label>First Name</label>
-                                <input type="text" class="form-control" placeholder="First Name">
+                                <input type="text" class="First-Name" placeholder="First Name">
                             </div>
                             <div class="col-md-6">
                                 <label>Last Name</label>
-                                <input type="text" class="form-control" placeholder="Last Name">
+                                <input type="text" class="Last-Name" placeholder="Last Name">
                             </div>
                         </div>
     
                         <label>Email</label>
-                        <input type="email" class="form-control" placeholder="Your Email">
+                        <input type="email" class="Email" placeholder="Your Email">
     
                         <div class="row">
                             <div class="col-md-4">
                                 <label>Country</label>
-                                <input type="text" class="form-control" placeholder="Country">
+                                <input type="text" class="Country" placeholder="Country">
                             </div>
                             <div class="col-md-8">
                                 <label>Number</label>
-                                <input type="text" class="form-control" placeholder="Phone Number">
+                                <input type="text" class="Number" placeholder="Phone Number">
                             </div>
                         </div>
     
                         <label>Subject</label>
-                        <input type="text" class="form-control" placeholder="Subject">
+                        <input type="text" class="Subject" placeholder="Subject">
     
                         <label>Message</label>
-                        <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+                        <textarea class="Message" rows="4" placeholder="Your Message"></textarea>
     
                         <button type="submit" class="btn-glow">Send It to the Stars</button>
                     </form>
