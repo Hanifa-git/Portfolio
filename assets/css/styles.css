@@ -476,12 +476,25 @@ h1 {
 }
 .Contact-content {
     font-family: 'Sanchez', serif;
+    
     font-size: larger;
     font-style: italic;
     background: linear-gradient(to right, #999999, white, #999999);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #999999; /* Fallback for unsupported browsers */
+}
+.contact-info{
+    font-family: 'orbitron', serif;
+    font-size: larger;
+    font-style: italic;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+
+}
+.contact-heading{
+    font-family: sanchez;
+    font-size: 25px;
+    font-style: italic;
 }
 .social-icons-container {
     display: flex;
@@ -545,64 +558,55 @@ h1 {
 }
 
 /* Form Styling */
-form {
-    padding: 20px;
+.form-container {
     border-radius: 10px;
+    padding: 20px;
 }
 
-label {
-    display: block;
-    font-size: 14px;
-    margin-top: 10px;
-    text-align: left;
-    color: #ccc;
-}
-
-.First-Name,
-.Last-Name,
-.Email,
-.Country,
-.Number,
-.Subject,
-.Message {
+.form-control {
     background: white;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    color: white;
-    box-shadow: 0 0 10px #ff00ff;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-/* Glowing Button */
-.btn-glow {
-    margin-top: 15px;
-    font-family: 'orbitron', serif;
-    font-style: italic;
-    display: block;
-    width: 100%;
-    background: linear-gradient(145deg, #934be0, #22075E);
-    color: white;
-    padding: 10px;
-    font-size: medium;
     border: none;
     border-radius: 5px;
-    box-shadow: 0 0 15px #ffffff;
-    transition: all 0.3s ease-in-out;
+    padding: 10px;
+    box-shadow: 0px 4px 15px #BE67EF;
 }
 
-.btn-glow:hover {
-    background: #d400d4;
-    box-shadow: 0 0 20px #ff00ff;
+.form-control:focus {
+    box-shadow: 0px 0px 15px rgba(128, 0, 128, 1);
+    outline: none;
 }
-.contact-heading{
-    font-family: 'Sanchez', serif;
+
+.btn-custom {
+    display: block;
+    width: 100%;
+    background: linear-gradient(145deg, #5a2693, #22075E);
+    font-family: orbitron;
     font-style: italic;
-    
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: medium;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+    transition: 0.3s;
 }
-.contact-info{
-    font-family: 'orbitron', serif;
-    font-style: italic;
-    text-shadow: 0 0 20px rgba(255, 0, 255, 0.8);
+
+.btn-custom:hover {
+    background: #a020f0;
+    box-shadow: 0px 0px 20px rgba(128, 0, 128, 1);
+}
+
+.info-box {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.info-box h2 {
+    color: #ffccff;
 }
 .earth {
     position: fixed; /* or absolute depending on your layout */
@@ -878,6 +882,7 @@ label {
     #Works img {
         width: 180px;
     }
+    
 }
 
 @media screen and (max-width: 992px) {
@@ -928,6 +933,9 @@ label {
     .Works-heading{
         margin-top: 25px;
     }
+    .View-all{
+        font-size: 30px;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -950,9 +958,7 @@ label {
     #Contact .Contact-content {
         font-size: 16px;
     }
-    #Contact .form-control {
-        padding: 8px;
-    }
+    
     #Contact .btn-glow {
         font-size: 16px;
         padding: 8px;
@@ -969,9 +975,7 @@ label {
     #Contact .Contact-content {
         font-size: 14px;
     }
-    #Contact .form-control {
-        padding: 7px;
-    }
+   
     #Contact .btn-glow {
         font-size: 14px;
         padding: 7px;
@@ -979,14 +983,7 @@ label {
     #Contact .social-icons-container {
         bottom: 15px;
     }
-    #Contact .row {
-        flex-direction: column;
-        align-items: center;
-    }
-    #Contact .col-md-6 {
-        width: 100%;
-        margin-bottom: 20px;
-    }
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -996,9 +993,7 @@ label {
     #Contact .Contact-content {
         font-size: 13px;
     }
-    #Contact .form-control {
-        padding: 6px;
-    }
+
     #Contact .btn-glow {
         font-size: 13px;
         padding: 6px;
@@ -1047,9 +1042,7 @@ label {
     #Contact .Contact-content {
         font-size: 11px;
     }
-    #Contact .form-control {
-        padding: 4px;
-    }
+    
     #Contact .btn-glow {
         font-size: 11px;
         padding: 4px;
