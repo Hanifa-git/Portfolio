@@ -304,7 +304,7 @@ h1 {
         width: 7px;
         height: 65px;
         background: #C89EC8;
-        border-radius: 5px;
+        border-radius: 1px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -386,7 +386,7 @@ h1 {
     font-style: italic;
     padding: 10px 20px;
     margin: 10px;
-    background: linear-gradient(145deg, #B37FEB, #22075E);
+    background: linear-gradient(145deg, #934be0, #22075E);
     color: white;
     text-decoration: none;
     font-size: medium;
@@ -494,6 +494,32 @@ h1 {
     transform: translateX(-50%);
     width: 100%;
 }
+.contact-form {
+    width: 100%;
+}
+
+/* Ensures the input fields are properly aligned */
+.contact-form .row {
+    margin-bottom: 10px;
+}
+
+/* Adjust form control styling */
+.contact-form .form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Responsive Fix */
+@media screen and (max-width: 768px) {
+    .contact-form .col-6,
+    .contact-form .col-4,
+    .contact-form .col-8 {
+        width: 100%; /* Stack inputs on smaller screens */
+    }
+}
+
 
 .line {
     width: 50px;
@@ -550,16 +576,17 @@ label {
 /* Glowing Button */
 .btn-glow {
     margin-top: 15px;
+    font-family: 'orbitron', serif;
+    font-style: italic;
     display: block;
     width: 100%;
-    background: #ff00ff;
+    background: linear-gradient(145deg, #934be0, #22075E);
     color: white;
     padding: 10px;
-    font-size: 18px;
+    font-size: medium;
     border: none;
     border-radius: 5px;
-    text-shadow: 0 0 10px white;
-    box-shadow: 0 0 15px #ff00ff;
+    box-shadow: 0 0 15px #ffffff;
     transition: all 0.3s ease-in-out;
 }
 
