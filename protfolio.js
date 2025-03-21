@@ -98,20 +98,20 @@
         } else if (screenWidth <= 768) {  // Tablet (Small)
             switch (sectionId) {
                 case "banner":
-                    return { scale: 0.8, xPercent: 0, yPercent: 0 };
+                    return { scale: 2.2, xPercent: 0, yPercent: 0 };
                 case "about":
-                    return { scale: 0.5, xPercent: -10, yPercent: 100 };
+                    return { scale: 0.5, xPercent: -17, yPercent: 78 };
                 case "Works":
-                    return { scale: 1.0, xPercent: 0, yPercent: 250 };   
+                    return { scale: 3.2, xPercent: 0, yPercent: 205 };   
             }
         } else if (screenWidth <= 1024) {  // Small Laptops (Medium)
             switch (sectionId) {
                 case "banner":
-                    return { scale: 1.1, xPercent: 0, yPercent: 0 };
+                    return { scale: 2.2, xPercent: 0, yPercent: 0 };
                 case "about":
-                    return { scale: 0.5, xPercent: -15, yPercent: 70 };
+                    return { scale: 0.5, xPercent: -15, yPercent: 84 };
                 case "Works":
-                    return { scale: 3.5, xPercent: 0, yPercent: 190 };
+                    return { scale: 3.2, xPercent: 0, yPercent: 230 };
                
             }
         } else {  // Desktop (Large)

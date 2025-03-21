@@ -288,11 +288,11 @@ h1 {
 }
 
 /* Show the scroll animation only on mobile screens */
-@media (max-width: 768px) {
+@media (max-width: 546px) {
     .scroll-bar-container {
         display: flex;
         position: absolute;
-        bottom: 20px;
+        bottom: 40px;
         right: 50%;
         transform: translateX(50%);
         align-items: center;
@@ -403,6 +403,7 @@ h1 {
     font-style: italic;
     font-size: medium;
     width: 80%;
+
     background: linear-gradient(to right, #999999, white, #999999);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -457,6 +458,7 @@ h1 {
     cursor: pointer;
     transition: color 0.3s ease-in-out;
     z-index: 3;
+    text-decoration: none;
 }
 
 
@@ -501,11 +503,7 @@ h1 {
     align-items: center;
     justify-content: center;
     margin-top: 40px;
-    position: absolute;
-    bottom: 30px;
-    left: 25%;
-    transform: translateX(-50%);
-    width: 100%;
+
 }
 .contact-form {
     width: 100%;
@@ -535,10 +533,10 @@ h1 {
 
 
 .line {
-    width: 50px;
+    width: 90px;
     height: 2px;
-    background-color: #999;
-    margin: 0 10px;
+    background-color: #FA34E6;
+    margin: 0 40px;
 }
 
 .social-icons {
@@ -639,75 +637,118 @@ h1 {
 @media screen and (max-width: 1200px) {
     h1 {
         font-size: 4rem;
-        top: 45%;
+        top: 30%;
         transform: translate(-50%, -230%);
     }
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 100vh; /* Ensure it takes full screen height */
+    }
     .subtitle {
-        font-size: 20px;
-        bottom: 5%;
-        max-width: 400px;
+        position: absolute;
+        top: 80%;
+        left: 6%;
+        transform: translate(0,0);
+        font-size: 16px;
+        text-align: left;
+    }
+    .subtitle::before{
+        height: 100px;
     }
     .little-secret {
         bottom: 25%;
         right: 10%;
     }
+    .little-secret {
+        font-size: 15px;
+        bottom: 55%;
+        right: 18%;
+    }
+    .little-secret::before{
+        height: 120px;
+    }
     .side-text {
         left: 5px;
         font-size: 9px;
     }
+    .branding{
+        top: 5%;
+        left: -250px;
+        transform: translate(5px, 10px);
+        font-size: 22px;
+    }
    
-}
-
-@media screen and (max-width: 992px) {
-    h1 {
-        font-size: 3.5rem;
-        top: 50%;
-        transform: translate(-50%, -200%);
-    }
-    .subtitle {
-        font-size: 18px;
-      
-    }
-    .little-secret {
-        font-size: 14px;
-        bottom: 30%;
-        right: 5%;
-    }
-
 }
 
 @media screen and (max-width: 768px) {
     .menu-toggle {
         font-size: 26px;
     }
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 100vh; /* Ensure it takes full screen height */
+    }
     h1 {
-        font-size: 2.8rem;
-        top: 45%;
+        font-size: 3.5rem;
+        top: 28%;
         transform: translate(-50%, -180%);
     }
     .subtitle {
+        position: absolute;
+        top: 80%;
+        left: 6%;
+        transform: translate(0,0);
         font-size: 16px;
-      
+        text-align: left;
+       
+    }
+    .subtitle::before{
+        height: 80px;
     }
     .little-secret {
-        font-size: 13px;
-        bottom: 35%;
+        font-size: 15px;
+        bottom: 55%;
         right: 5%;
+    }
+    .little-secret::before{
+        height: 100px;
     }
     .side-text {
         font-size: 8px;
         left: 2px;
     }
+    .branding{
+        top: 12%;
+        left: -250px;
+        transform: translate(5px, 10px);
+        font-size: 22px;
+    }
 
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 546px) {
     .menu-toggle {
         font-size: 24px;
     }
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 100vh; /* Ensure it takes full screen height */
+    }
     h1 {
         font-size: 2.2rem;
-        top: 28%;
+        top: 25%;
         transform: translate(-50%, -160%);
     }
     .subtitle {
@@ -723,16 +764,17 @@ h1 {
     .subtitle::before{
         height: 90px;
     }
+    
     .little-secret {
         position: absolute;
         width: 120px !important;
         transform: translate(0,0);
-        font-size: 6px;
-        top: 23%;
+        font-size: 8px;
+        top: 25% !important;
         left: 65%;
     }
     .little-secret::before{
-        height: 80px;
+        height: 65px;
     }
     .side-text {
         font-size: 6px;
@@ -746,41 +788,12 @@ h1 {
     height: 30px;
 }
     .branding{
-        top: 45px;
-        left: 0px;
+        top: 80px;
+        left: -140px;
         transform: translate(5px, 10px);
         font-size: 12px;
-    }
-    
+    } 
 }
-
-@media screen and (max-width: 400px) {
-    .hero {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        height: 100vh; /* Ensure it takes full screen height */
-    }
-
-    h1 {
-        font-size: 3rem;
-        position: relative; /* Change from absolute */
-        margin-top: -750px; /* Moves it up */
-        text-align: center;
-    }
-    .subtitle {
-        font-size: 13px;
-    }
-    .little-secret {
-        font-size: 11px;
-        bottom: 55%;
-        right: 0%;
-        width: 30%;
-    }
-}
-
 
 /* 🌍 Responsive Design for About Section */
 @media screen and (max-width: 1200px) {
@@ -798,20 +811,6 @@ h1 {
     }
 }
 
-@media screen and (max-width: 992px) {
-    #about .neon-text {
-        font-size: 40px;
-    }
-    #about .sub-text {
-        font-size: 14px;
-    }
-    #about .About-content {
-        font-size: 14px;
-    }
-    #about img {
-        width: 180px;
-    }
-}
 
 @media screen and (max-width: 768px) {
     #about .neon-text {
@@ -824,12 +823,13 @@ h1 {
         font-size: 13px;
     }
     #about img {
-        width: 150px;
+        width: 140px;
     }
     #about .buttons {
         flex-direction: column;
         align-items: center;
     }
+    
 }
 
 @media screen and (max-width: 576px) {
@@ -856,21 +856,6 @@ h1 {
     }
 }
 
-@media screen and (max-width: 400px) {
-    #about .neon-text {
-        font-size: 25px;
-    }
-    #about .sub-text {
-        font-size: 11px;
-    }
-    #about .About-content {
-        font-size: 11px;
-    }
-    #about img {
-        width: 140px;
-    }
-}
-
 /* 🌍 Responsive Design for Works Section */
 @media screen and (max-width: 1200px) {
     #Works .neon-text {
@@ -883,18 +868,6 @@ h1 {
         width: 180px;
     }
     
-}
-
-@media screen and (max-width: 992px) {
-    #Works .neon-text {
-        font-size: 40px;
-    }
-    #Works .Works-content {
-        font-size: 14px;
-    }
-    #Works img {
-        width: 160px;
-    }
 }
 
 @media screen and (max-width: 768px) {
@@ -938,17 +911,6 @@ h1 {
     }
 }
 
-@media screen and (max-width: 400px) {
-    #Works .neon-text {
-        font-size: 25px;
-    }
-    #Works .Works-content {
-        font-size: 11px;
-    }
-    #Works img {
-        width: 100px;
-    }
-}
 
 /* 🌍 Responsive Design for Contact Section */
 @media screen and (max-width: 1200px) {
@@ -968,23 +930,6 @@ h1 {
     }
 }
 
-@media screen and (max-width: 992px) {
-    #Contact .neon-text {
-        font-size: 40px;
-    }
-    #Contact .Contact-content {
-        font-size: 14px;
-    }
-   
-    #Contact .btn-glow {
-        font-size: 14px;
-        padding: 7px;
-    }
-    #Contact .social-icons-container {
-        bottom: 15px;
-    }
-    
-}
 
 @media screen and (max-width: 768px) {
     #Contact .neon-text {
@@ -1032,28 +977,5 @@ h1 {
     }
     #Contact .line {
         width: 20px;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    #Contact .neon-text {
-        font-size: 25px;
-    }
-    #Contact .Contact-content {
-        font-size: 11px;
-    }
-    
-    #Contact .btn-glow {
-        font-size: 11px;
-        padding: 4px;
-    }
-    #Contact .social-icons-container {
-        bottom: 0;
-    }
-    #Contact .social-icons {
-        gap: 10px;
-    }
-    #Contact .line {
-        width: 10px;
     }
 }
