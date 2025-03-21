@@ -14,11 +14,39 @@ html, body {
     position: relative;
     padding-top: 70px;
 }
+.go-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #FA34E6;
+    color: #fff;
+    border: none;
+    border-radius: 50%;  /* Ensures the button is round */
+    padding: 10px; /* Adjust padding to make it more circular */
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 50px; /* Set a fixed width */
+    height: 50px; /* Set a fixed height */
+    text-align: center; /* Center the icon inside the button */
+}
+
+.go-to-top:hover,i {
+    background-color: #ffffff;
+    color: black;
+}
+
+.go-to-top i {
+    font-size: 18px;
+    line-height: 0px; /* Vertically center the icon */
+}
+
 
 
 /* 📋 Top Navigation Bar Styling */
 .navbar {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -27,10 +55,14 @@ html, body {
     align-items: center;
     padding: 15px 20px;
     z-index: 1000;
+    margin-bottom: 100px;
+    margin-top: 10px;
 }
 
 .logo img {
     filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.7));
+    height: 50px;
+    width: 70px;
 }
 
 /* Navigation Menu */

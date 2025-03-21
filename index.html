@@ -22,7 +22,7 @@
         <header class="navbar">
             <!-- Logo -->
             <div class="logo">
-                <img src="/png" alt="Logo">
+                <img src="./assets/image/logo2.png" alt="Logo">
             </div>
     
             <!-- Navigation Menu -->
@@ -33,10 +33,10 @@
                     <span class="bar"></span>
                 </div>
                 <ul class="nav-links" id="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#banner">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#Works">Projects</a></li>
+                    <li><a href="#Contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -205,5 +205,36 @@
     
     
             <script src="/protfolio.js"></script>
+            
+
+          
+<!-- Go to Top Button -->
+<button id="goToTopBtn" class="go-to-top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+    // Get the button
+const goToTopBtn = document.getElementById("goToTopBtn");
+
+// Show button when scrolling down
+window.addEventListener("scroll", () => {
+if (window.scrollY > 100) {
+goToTopBtn.style.display = "block";
+} else {
+goToTopBtn.style.display = "none";
+}
+});
+
+// Scroll to top when button is clicked
+goToTopBtn.addEventListener("click", () => {
+window.scrollTo({
+top: 0,
+behavior: "smooth"
+});
+});
+</script>
+
+
 </body>
 </html>
