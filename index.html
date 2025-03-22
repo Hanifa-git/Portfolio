@@ -91,8 +91,8 @@
  
                     <!-- Buttons -->
                     <div class="buttons text-center">
-                        <a href="#" class="btn custom-btn">RESUME ⬇</a>
-                        <a href="#" class="btn custom-btn">CONTACT</a>
+                        <a href="./assets/css/hanifa-Resume.pdf" class="btn custom-btn" download="Hanifa_Resume.pdf">RESUME ⬇</a>
+                        <a href="#Contact" class="btn custom-btn">CONTACT</a>
                     </div>
                 </div>
             </div>
@@ -147,42 +147,42 @@
     
                 <div class="col-md-6 d-flex justify-content-center">
                     <div class="form-container">
-                        <form>
+                        <form action="https://formspree.io/f/myzewygn" method="POST">
                             <div class="row gx-2 mb-3">
                                 <div class="col-6">
                                     <label class="form-label">First Name</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="First_name" class="form-control" required>
                                 </div>
                                 <div class="col-6">
                                     <label class="form-label">Last Name</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="Last_name" class="form-control" required>
                                 </div>
                             </div>
          
                             <div class="mb-3">
                                 <label class="form-label">Email</label>
-                                <input type="email" class="form-control">
+                                <input type="mail" name="Email" class="form-control" required>
                             </div>
          
                             <div class="row gx-2 mb-3">
                                 <div class="col-4">
                                     <label class="form-label">Country</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="Country" class="form-control" required>
                                 </div>
                                 <div class="col-8">
                                     <label class="form-label">Number</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="Number" class="form-control" required>
                                 </div>
                             </div>
          
                             <div class="mb-3">
                                 <label class="form-label">Subject</label>
-                                <input type="text" class="form-control">
+                                <input type="text" name="Subject" class="form-control" required>
                             </div>
          
                             <div class="mb-3">
                                 <label class="form-label">Message</label>
-                                <textarea class="form-control" rows="4"></textarea>
+                                <textarea class="form-control" name="Message" rows="4" required></textarea>
                             </div>
          
                             <button type="submit" class="btn btn-custom">Send It to the Stars</button>
