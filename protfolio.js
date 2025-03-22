@@ -89,18 +89,18 @@
         if (screenWidth <= 546) {  // Mobile (Extra Small)
             switch (sectionId) {
                 case "banner":
-                    return { scale: 1.8, xPercent: 0, yPercent: -12 };
+                    return { scale: 2.5, xPercent: 0, yPercent: -12 };
                 case "about":
-                    return { scale: 0.7, xPercent: 25, yPercent: 75 };
+                    return { scale: 0.9, xPercent: 25, yPercent: 75 };
                 case "Works":
-                    return { scale: 3.0, xPercent: 0, yPercent: 280 };
+                    return { scale: 3.7, xPercent: 0, yPercent: 270 };
             }
         } else if (screenWidth <= 768) {  // Tablet (Small)
             switch (sectionId) {
                 case "banner":
-                    return { scale: 2.2, xPercent: 0, yPercent: 0 };
+                    return { scale: 2.5, xPercent: 0, yPercent: 0 };
                 case "about":
-                    return { scale: 0.5, xPercent: -17, yPercent: 95 };
+                    return { scale: 0.5, xPercent: -15, yPercent: 88 };
                 case "Works":
                     return { scale: 3.2, xPercent: 0, yPercent: 290 };   
             }
