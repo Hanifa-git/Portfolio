@@ -640,7 +640,7 @@ h1 {
 }
 
   /* 🌍 Responsive Design */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
     h1 {
         font-size: 4rem;
         top: 30%;
@@ -804,7 +804,7 @@ h1 {
 
 
 /* 🌍 Responsive Design for About Section */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
     #about .neon-text {
         font-size: 50px;
     }
@@ -877,7 +877,7 @@ h1 {
 
 
 /* 🌍 Responsive Design for Works Section */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
     #Works .neon-text {
         font-size: 50px;
     }
@@ -942,7 +942,7 @@ h1 {
 
 
 /* 🌍 Responsive Design for Contact Section */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
     #Contact .neon-text {
         font-size: 50px;
     }
