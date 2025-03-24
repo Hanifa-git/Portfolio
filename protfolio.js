@@ -234,7 +234,82 @@ hamburgerMenu.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
 
+// Project Data
+const projects = [
+    {
+        heading: "Project One",
+        description: "A cutting-edge UI design that enhances user experience and accessibility.",
+        image1: "./assets/image/image.png",
+        image2: "./assets/image/image.png"
+    },
+    {
+        heading: "Project Two",
+        description: "An innovative e-commerce platform with seamless navigation and smooth interactions.",
+        image1: "./assets/image/logo2.png",
+        image2: "./assets/image/logo2.png"
+    },
+    {
+        heading: "Project Three",
+        description: "A futuristic dashboard with data-driven insights for better decision-making.",
+        image1: "./assets/image/image.png",
+        image2: "./assets/image/image.png"
+    }
+];
 
+let currentIndex = -1; // Start without displaying anything
+
+function typeText(element, text, callback) {
+    element.textContent = "";
+    let i = 0;
+    function type() {
+        if (i < text.length) {
+            element.textContent += text.charAt(i);
+            i++;
+            setTimeout(type, 50);
+        } else {
+            if (callback) callback();
+        }
+    }
+    type();
+}
+
+function updateProject() {
+    const heading = document.getElementById("project-heading");
+    const description = document.getElementById("project-description");
+    const image1 = document.getElementById("project-image1");
+    const image2 = document.getElementById("project-image2");
+
+    // Fade out images
+    image1.classList.remove("show");
+    image2.classList.remove("show");
+
+    setTimeout(() => {
+        // Move to next project
+        currentIndex = (currentIndex + 1) % projects.length;
+
+        // Typing effect for heading & description
+        typeText(heading, projects[currentIndex].heading, () => {
+            typeText(description, projects[currentIndex].description);
+        });
+
+        // Change image sources
+        image1.src = projects[currentIndex].image1;
+        image2.src = projects[currentIndex].image2;
+
+        // Show images with slide-in effect
+        setTimeout(() => {
+            image1.classList.remove("d-none");
+            image2.classList.remove("d-none");
+            image1.classList.add("show");
+            setTimeout(() => image2.classList.add("show"), 500); // Staggered slide-in
+        }, 500);
+
+    }, 500); // Wait for fade-out before changing content
+}
+
+// Start showing projects every 5 seconds
+setTimeout(updateProject, 0); // Show first project immediately
+setInterval(updateProject, 8000);
 
 
 }
