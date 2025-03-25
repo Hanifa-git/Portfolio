@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="works.css">
 </head>
 <body>
+    
 
     <!-- Tab Navigation -->
     <div class="tabs">
@@ -14,49 +15,58 @@
         <div class="tab" data-section="Case-Study">Case Study</div>
         <div class="tab" data-section="Branding">Branding</div>
     </div>
-
+    
+   
     <!-- Sections -->
     <section id="works" class="section active ">
        
         <div class="wrapper">
             <div class="container">
                 <input type="radio" name="slide1" id="c1" checked>
-                <label for="c1" class="card">
+                <label for="c1" class="card" data-full-image="./assets/image/project1.jpg">
+                    <button class="view-full-btn">View Full</button>
                     <div class="row">
                         <div class="icon">1</div>
                         <div class="description">
                             <h4>Winter</h4>
                             <p>Winter has so much to offer - creative activities</p>
+                            
                         </div>
                     </div>
                 </label>
                 <input type="radio" name="slide1" id="c2">
-                <label for="c2" class="card">
+                <label for="c2" class="card" data-full-image="./assets/image/project1.jpg">
+                    <button class="view-full-btn">View Full</button>
                     <div class="row">
                         <div class="icon">2</div>
                         <div class="description">
                             <h4>Digital Technology</h4>
                             <p>Gets better every day - stay tuned</p>
+                           
                         </div>
                     </div>
                 </label>
                 <input type="radio" name="slide1" id="c3">
-                <label for="c3" class="card">
+                <label for="c3" class="card" data-full-image="./assets/image/project1.jpg">
+                    <button class="view-full-btn">View Full</button>
                     <div class="row">
                         <div class="icon">3</div>
                         <div class="description">
                             <h4>Globalization</h4>
                             <p>Help people all over the world</p>
+                           
                         </div>
                     </div>
                 </label>
                 <input type="radio" name="slide1" id="c4">
-                <label for="c4" class="card">
+                <label for="c4" class="card" data-full-image="./assets/image/project1.jpg">
+                    <button class="view-full-btn">View Full</button>
                     <div class="row">
                         <div class="icon">4</div>
                         <div class="description">
                             <h4>New technologies</h4>
                             <p>Space engineering becomes more and more advanced</p>
+                            
                         </div>
                     </div>
                 </label>
@@ -64,47 +74,65 @@
         </div>
     </section>
 
+     <!-- Model -->
+     <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">×</button>
+            <img id="fullImage" src="" alt="Full Image" style="width: 100%; height: auto;">
+        </div>
+    </div>
+
+    
+
     <section id="Case-Study" class="section ">
         
         <div class="wrapper">
             <div class="container">
                 <input type="radio" name="slide2" id="p1" checked>
-                <label for="p1" class="card">
+                <label for="p1" class="card" data-full-image="./assets/image/project1.jpg">
+                    <button class="view-full-btn">View Full</button>
                     <div class="row">
                         <div class="icon">1</div>
                         <div class="description">
                             <h4>AI Innovations</h4>
                             <p>Artificial intelligence is shaping the future</p>
+                            
                         </div>
                     </div>
                 </label>
                 <input type="radio" name="slide2" id="p2">
-                <label for="p2" class="card">
+                <label for="p2" class="card" data-full-image="./assets/image/project1.jpg">
+                    <button class="view-full-btn">View Full</button>
                     <div class="row">
                         <div class="icon">2</div>
                         <div class="description">
                             <h4>Smart Cities</h4>
                             <p>Urban areas integrated with technology</p>
+                            
                         </div>
                     </div>
                 </label>
                 <input type="radio" name="slide2" id="p3">
-                <label for="p3" class="card">
+                <label for="p3" class="card" data-full-image="./assets/image/project1.jpg">
+                    <button class="view-full-btn">View Full</button>
                     <div class="row">
                         <div class="icon">3</div>
                         <div class="description">
                             <h4>Virtual Reality</h4>
                             <p>Immersive experiences like never before</p>
+                            
                         </div>
                     </div>
                 </label>
                 <input type="radio" name="slide2" id="p4">
-                <label for="p4" class="card">
+                <label for="p4" class="card" data-full-image="./assets/image/project1.jpg">
+                    <button class="view-full-btn">View Full</button>
                     <div class="row">
                         <div class="icon">4</div>
                         <div class="description">
                             <h4>Renewable Energy</h4>
                             <p>Future-proofing the planet with sustainability</p>
+                            
                         </div>
                     </div>
                 </label>
@@ -117,42 +145,50 @@
         <div class="wrapper">
             <div class="container">
                 <input type="radio" name="slide3" id="a1" checked>
-                <label for="a1" class="card">
+                <label for="a1" class="card" data-full-image="./assets/image/project1.jpg">
+                    <button class="view-full-btn">View Full</button>
                     <div class="row">
                         <div class="icon">1</div>
                         <div class="description">
                             <h4>Awards</h4>
                             <p>Recognizing outstanding work</p>
+                            
                         </div>
                     </div>
                 </label>
                 <input type="radio" name="slide3" id="a2">
-                <label for="a2" class="card">
+                <label for="a2" class="card" data-full-image="./assets/image/project1.jpg">
+                    <button class="view-full-btn">View Full</button>
                     <div class="row">
                         <div class="icon">2</div>
                         <div class="description">
                             <h4>Milestones</h4>
                             <p>Big steps towards success</p>
+                           
                         </div>
                     </div>
                 </label>
                 <input type="radio" name="slide3" id="a3">
-                <label for="a3" class="card">
+                <label for="a3" class="card" data-full-image="./assets/image/project1.jpg">
+                    <button class="view-full-btn">View Full</button>
                     <div class="row">
                         <div class="icon">3</div>
                         <div class="description">
                             <h4>Partnerships</h4>
                             <p>Collaboration for greater impact</p>
+                            
                         </div>
                     </div>
                 </label>
                 <input type="radio" name="slide3" id="a4">
-                <label for="a4" class="card">
+                <label for="a4" class="card" data-full-image="./assets/image/project1.jpg">
+                    <button class="view-full-btn">View Full</button>
                     <div class="row">
                         <div class="icon">4</div>
                         <div class="description">
                             <h4>Community Impact</h4>
                             <p>Giving back to society</p>
+                            
                         </div>
                     </div>
                 </label>
@@ -163,22 +199,91 @@
     
 
     <script>
+  // Get all the cards and modal elements
+const cards = document.querySelectorAll('.card');
+const modal = document.getElementById('modal');
+const fullImage = document.getElementById('fullImage');
+
+// Iterate over each card
+cards.forEach(card => {
+    const fullImageUrl = card.getAttribute('data-full-image');
+    const viewFullButton = card.querySelector('.view-full-btn');
+
+    // Function to show the button
+    function showButton() {
+        if (viewFullButton) {
+            viewFullButton.style.display = 'block';
+        }
+    }
+
+    // Function to hide the button
+    function hideButton() {
+        if (viewFullButton) {
+            viewFullButton.style.display = 'none';
+        }
+    }
+
+    // Handle card click (open/close the card)
+    card.addEventListener('click', () => {
+        // Check if the card is already open
+        if (card.classList.contains('open')) {
+            // If the card is already open, do nothing (button remains visible)
+            return;
+        }
+
+        // Close all other cards
+        cards.forEach(c => {
+            if (c !== card) {
+                c.classList.remove('open');
+                const otherButton = c.querySelector('.view-full-btn');
+                if (otherButton) {
+                    otherButton.style.display = 'none'; // Hide button for other cards
+                }
+            }
+        });
+
+        // Open the clicked card and show the button
+        card.classList.add('open');
+        showButton(); // Show the button when the card is opened
+    });
+
+    // Handle "View Full" button click to open the modal
+    if (viewFullButton) {
+        viewFullButton.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent card click from firing when the button is clicked
+            fullImage.src = fullImageUrl;
+            modal.style.display = 'flex'; // Open the modal with the full image
+        });
+    }
+});
+
+// Close modal function
+function closeModal() {
+    modal.style.display = 'none';
+}
+
+// Close modal if the user clicks outside the image
+modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        closeModal();
+    }
+});
+    
+
+// Tabs functionality
         const tabs = document.querySelectorAll('.tab');
         const sections = document.querySelectorAll('.section');
-
+    
         tabs.forEach(tab => {
             tab.addEventListener('click', () => {
-                // Remove active class from all tabs and sections
                 tabs.forEach(t => t.classList.remove('active'));
                 sections.forEach(sec => sec.classList.remove('active'));
-
-                // Activate clicked tab and corresponding section
+    
                 tab.classList.add('active');
                 document.getElementById(tab.dataset.section).classList.add('active');
             });
         });
     </script>
-
     
 
 </body>
