@@ -17,6 +17,7 @@
 
 </head>
 <body>
+    
     <!-- 🌟 Logo (Top-Left) -->
     <section class="banner" id="banner">
         <header class="navbar">
@@ -66,6 +67,7 @@
             </div>
             <p class="scrolling-text">Scroll Down</p>
         </div>
+        
     </section>
     
     
@@ -201,7 +203,9 @@
         </div>
     </section>
     
-    
+    <svg>
+        <path id="cursorPath" d="M0,0" />
+    </svg>
             <script src="/protfolio.js"></script>
             
 
@@ -233,6 +237,45 @@ behavior: "smooth"
 });
 </script>
 
+<script>
+     let points = [];
+        const path = document.getElementById("cursorPath");
+        const maxTrailLength = 5;
+        let timeout;
+
+        document.addEventListener("mousemove", (event) => {
+            points.push({ x: event.clientX, y: event.clientY });
+
+            if (points.length > maxTrailLength) {
+                points.shift(); // Remove the oldest point for a fading effect
+            }
+
+            requestAnimationFrame(() => {
+                path.setAttribute("d", generateSmoothPath(points));
+            });
+
+            // Reset the timeout every time the mouse moves
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                points = []; // Clear the trail after inactivity
+                path.setAttribute("d", "");
+            }, 200); // Adjust time before disappearance
+        });
+
+        function generateSmoothPath(points) {
+            if (points.length < 2) return "M0,0";
+
+            let d = `M${points[0].x},${points[0].y}`;
+            for (let i = 1; i < points.length - 1; i++) {
+                let xc = (points[i].x + points[i + 1].x) / 2;
+                let yc = (points[i].y + points[i + 1].y) / 2;
+                d += ` Q${points[i].x},${points[i].y} ${xc},${yc}`;
+            }
+
+            d += ` T${points[points.length - 1].x},${points[points.length - 1].y}`;
+            return d;
+        }
+</script>
 
 
 </body>

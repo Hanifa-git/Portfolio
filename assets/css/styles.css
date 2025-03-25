@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+
 html, body {
     overflow-x: hidden;
     max-width: 100%;
@@ -13,6 +15,25 @@ html, body {
     justify-content: center;
     position: relative;
     padding-top: 70px;
+}
+
+svg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}
+
+path {
+    fill: none;
+    stroke: #FA34E6;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-opacity: 0.8;
+    filter: drop-shadow(0 0 20px #FA34E6) drop-shadow(0 0 30px #FA34E6) drop-shadow(0 0 40px #FA34E6);
 }
 
 .go-to-top {
