@@ -283,7 +283,7 @@ h1 {
     .scroll-bar-container {
         display: flex;
         position: absolute;
-        bottom: 40px;
+        bottom: 65px;
         right: 50%;
         transform: translateX(50%);
         align-items: center;
@@ -306,7 +306,7 @@ h1 {
         height: 29px;
         background: #E516E9;
         border-radius: 5px;
-        animation: moveUpDown 1.5s infinite alternate ease-in-out;
+        animation: moveUpDown .5s infinite alternate ease-in-out;
     }
 
     /* Scrolling Text (Below the Scroll Bar) */
@@ -758,15 +758,15 @@ h1 {
     .subtitle {
         position: absolute;
         width: 270px;
-        top: 43%;
+        top: 38%;
         left: 6%;
         transform: translate(0,0);
-        font-size: 12px;
+        font-size: 13px;
         text-align: left;
        
     }
     .subtitle::before{
-        height: 90px;
+        height: 80px;
     }
     
     .little-secret {
@@ -792,8 +792,8 @@ h1 {
     height: 30px;
 }
     .branding{
-        top: 80px;
-        left: -140px;
+        top: 93px;
+        left: -150px;
         transform: translate(5px, 10px);
         font-size: 12px;
     } 
