@@ -89,7 +89,7 @@
         if (screenWidth <= 546) {  // Mobile (Extra Small)
             switch (sectionId) {
                 case "banner":
-                    return { scale: 2.8, xPercent: 0, yPercent: -12 };
+                    return { scale: 2.8, xPercent: 0, yPercent: -17 };
                 case "about":
                     return { scale: 0.9, xPercent: 25, yPercent: 75 };
                 case "Works":

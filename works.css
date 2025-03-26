@@ -9,7 +9,7 @@
 
 body {
     background-color: #eeeeea;
-    height: 100%;
+    height: 100vh;
     background: url('./assets/image/bannerbg.png') no-repeat center center/cover;
 }
 
